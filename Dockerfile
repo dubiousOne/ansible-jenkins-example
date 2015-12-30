@@ -1,5 +1,5 @@
 FROM centos:latest
-MAINTAINER Dennis Rowe
+MAINTAINER Cody Welch
 
 RUN yum -y update
 RUN yum -y install epel-release
