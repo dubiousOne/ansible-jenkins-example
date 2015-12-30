@@ -1,21 +1,19 @@
-FROM ubuntu
+FROM centos:latest
 MAINTAINER Dennis Rowe
 
-RUN apt-get update
-RUN apt-get -y install software-properties-common
-RUN apt-add-repository ppa:ansible/ansible
-RUN apt-get update
-RUN apt-get -y install ansible
-RUN apt-get -y install python-pip
+RUN yum -u update
+RUN yum -y install epel-release
+RUN yum -y install ansible
+RUN yum -y install python-pip
 RUN pip install https://github.com/willthames/ansible-lint/archive/master.zip
-RUN apt-get -y install rubygems-integration
+RUN yum -y install rubygems-devel
 RUN gem install serverspec
 RUN gem install rake
 
 # Required for Docker jenkins plugin
-RUN apt-get -y install openssh-server
+RUN yum -y install openssh-server
 RUN mkdir /var/run/sshd
-RUN apt-get -y install openjdk-6-jdk
+RUN yum -y install java-1.6.0-openjdk
 RUN useradd jenkins
 # This is not safe, this is a test
 RUN echo "jenkins:xt4dFV4WdkURU3v8TRWu" | chpasswd
