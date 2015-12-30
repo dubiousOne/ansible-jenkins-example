@@ -1,7 +1,7 @@
 FROM centos:latest
 MAINTAINER Dennis Rowe
 
-RUN yum -u update
+RUN yum -y update
 RUN yum -y install epel-release
 RUN yum -y install ansible
 RUN yum -y install python-pip
