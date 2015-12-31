@@ -1,9 +1,7 @@
 FROM centos:latest
 MAINTAINER Cody Welch
 
-RUN yum -y update
 RUN yum -y install epel-release
-RUN yum -y update
 RUN yum -y install ansible
 RUN yum -y install python-pip
 RUN pip install https://github.com/willthames/ansible-lint/archive/master.zip
