@@ -6,6 +6,7 @@ RUN yum -y install ansible
 RUN yum -y install python-pip
 RUN pip install https://github.com/willthames/ansible-lint/archive/master.zip
 RUN yum -y install rubygems-devel
+RUN gem install rspec
 RUN gem install serverspec
 RUN gem install rake
 
