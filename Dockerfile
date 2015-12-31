@@ -1,6 +1,7 @@
 FROM centos:latest
 MAINTAINER Cody Welch
 
+RUN yum -y update
 RUN yum -y install epel-release
 RUN yum -y update
 RUN yum -y install ansible
