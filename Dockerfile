@@ -13,7 +13,7 @@ RUN gem install rake
 # Required for Docker jenkins plugin
 RUN yum -y install openssh-server
 RUN mkdir /var/run/sshd
-EXPOST 22
+EXPOSE 22
 CMD ["/usr/sbin/sshd", "-D"]
 RUN yum -y install java-1.6.0-openjdk
 RUN useradd jenkins
