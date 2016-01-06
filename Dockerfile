@@ -13,11 +13,9 @@ RUN gem install rake
 # Required for Docker jenkins plugin
 RUN yum -y install openssh-server
 RUN mkdir /var/run/sshd
+CMD ["/usr/sbin/sshd", "-D"]
 RUN yum -y install java-1.6.0-openjdk
 RUN useradd jenkins
 # This is not safe, this is a test
 RUN echo "jenkins:xt4dFV4WdkURU3v8TRWu" | chpasswd
 RUN echo "jenkins    ALL=NOPASSWD: ALL" >> /etc/sudoers
-
-# set entrypoint (ensures sshd started)
-ENTRYPOINT systemctl restart sshd && bash
