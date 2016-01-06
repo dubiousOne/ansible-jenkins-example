@@ -18,3 +18,6 @@ RUN useradd jenkins
 # This is not safe, this is a test
 RUN echo "jenkins:xt4dFV4WdkURU3v8TRWu" | chpasswd
 RUN echo "jenkins    ALL=NOPASSWD: ALL" >> /etc/sudoers
+
+# set entrypoint (ensures sshd started)
+ENTRYPOINT systemctl restart sshd && bash
