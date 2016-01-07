@@ -14,7 +14,6 @@ RUN gem install rake
 RUN yum -y install openssh-server
 RUN mkdir /var/run/sshd
 EXPOSE 22
-RUN /usr/sbin/sshd -D
 RUN yum -y install java-1.6.0-openjdk
 RUN useradd jenkins
 # This is not safe, this is a test
