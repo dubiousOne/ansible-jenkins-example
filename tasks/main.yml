@@ -9,7 +9,7 @@
   file: path=/run/lock state=directory
 
 - name: Start services
-  command: systemctl start httpd
+  command: sudo systemctl start httpd
 
 - name: Check service status
-  command: systemctl status httpd
+  command: sudo systemctl status httpd
