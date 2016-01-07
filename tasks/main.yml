@@ -3,7 +3,7 @@
 - name: Install list of packages
   action: yum pkg={{item}} state=installed
   with_items:
-  - apache2
+  - httpd
 
 - name: Create directory /run/lock for apache2
   file: path=/run/lock state=directory
