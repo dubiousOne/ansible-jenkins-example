@@ -12,4 +12,4 @@
   command: sudo systemctl start httpd
 
 - name: Check service status
-  command: sudo systemctl status httpd
+  command: /usr/bin/sudo /usr/bin/systemctl status httpd
