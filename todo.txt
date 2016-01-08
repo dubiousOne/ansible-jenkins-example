@@ -1,0 +1,2 @@
+start systemctl service with ansible on centos7
+test project on centos6
