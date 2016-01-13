@@ -9,6 +9,7 @@ RUN yum -y install gcc
 RUN yum -y install tar
 RUN yum groupinstall -y 'development tools'
 RUN yum -y install which
+RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 RUN curl -L get.rvm.io | bash -s stable
 RUN source /etc/profile.d/rvm.sh
 RUN rvm reload
