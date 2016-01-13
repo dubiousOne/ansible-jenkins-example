@@ -1,4 +1,4 @@
-FROM centos6
+FROM centos:centos6
 MAINTAINER Cody Welch
 
 RUN yum -y install epel-release
