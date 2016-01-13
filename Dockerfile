@@ -6,6 +6,7 @@ RUN yum -y install ansible
 RUN yum -y install python-pip
 RUN pip install --upgrade pip
 RUN yum -y install gcc
+RUN yum -y install tar
 RUN yum groupinstall -y 'development tools'
 RUN yum -y install which
 RUN curl -L get.rvm.io | bash -s stable
