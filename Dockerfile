@@ -5,7 +5,7 @@ RUN yum -y install epel-release
 RUN yum -y install ansible
 RUN yum -y install python-pip
 RUN yum -y install gcc
-RUN pip install https://github.com/willthames/ansible-lint/archive/master.zip
+RUN pip install ansible-lint
 RUN yum -y install rubygems-devel
 RUN gem install rspec
 RUN gem install serverspec
