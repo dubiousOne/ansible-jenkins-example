@@ -6,7 +6,7 @@ RUN yum -y install ansible
 RUN yum -y install python-pip
 RUN pip install --upgrade pip
 RUN yum -y install gcc
-RUN pip install --upgrade pycrypto
+RUN yum -y upgrade python-crypto
 RUN pip install ansible-lint
 RUN yum -y install rubygems-devel
 RUN gem install rspec
