@@ -6,6 +6,12 @@ RUN yum -y install ansible
 RUN yum -y install python-pip
 RUN pip install --upgrade pip
 RUN yum -y install gcc
+RUN yum groupinstall -y 'development tools'
+RUN curl -L get.rvm.io | bash -s stable
+RUN source /etc/profile.d/rvm.sh
+RUN rvm reload
+RUN rvm install 2.0.0
+RUN rvm use 2.0.0 --default
 RUN yum -y install python-devel
 RUN pip install ansible-lint
 RUN yum -y install rubygems-devel
