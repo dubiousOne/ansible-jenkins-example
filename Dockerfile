@@ -28,7 +28,7 @@ RUN yum -y install openssh-server
 RUN mkdir /var/run/sshd
 EXPOSE 22
 RUN yum -y install java-1.6.0-openjdk
-RUN pip uninstall pycrypto
+RUN pip uninstall -y pycrypto
 RUN yum -y erase python-crypto
 RUN yum -y install python-crypto
 RUN yum -y install python-paramiko
