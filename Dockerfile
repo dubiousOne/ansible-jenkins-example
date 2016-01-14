@@ -29,7 +29,7 @@ RUN mkdir /var/run/sshd
 EXPOSE 22
 RUN yum -y install java-1.6.0-openjdk
 RUN pip uninstall pycrypto
-RUN yum -yerase python-crypto
+RUN yum -y erase python-crypto
 RUN yum -y install python-crypto
 RUN yum -y install python-paramiko
 RUN useradd jenkins
