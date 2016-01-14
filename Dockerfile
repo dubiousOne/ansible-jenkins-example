@@ -4,7 +4,7 @@ MAINTAINER Cody Welch
 RUN yum -y install epel-release
 RUN yum -y install ansible
 RUN yum -y install python-pip
-RUN pip install --upgrade pip
+#RUN pip install --upgrade pip
 RUN yum -y install gcc
 RUN yum -y install tar
 #RUN yum groupinstall -y 'development tools'
