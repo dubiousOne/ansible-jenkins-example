@@ -2,7 +2,6 @@ FROM centos:centos6
 MAINTAINER Cody Welch
 
 RUN yum -y install epel-release
-RUN yum -y install ansible
 RUN yum -y install python-pip
 #RUN pip install --upgrade pip
 RUN yum -y install gcc
@@ -32,6 +31,7 @@ RUN pip uninstall -y pycrypto
 RUN yum -y erase python-crypto
 RUN yum -y install python-crypto
 RUN yum -y install python-paramiko
+RUN yum -y install ansible
 RUN useradd jenkins
 # This is not safe, this is a test
 RUN echo "jenkins:xt4dFV4WdkURU3v8TRWu" | chpasswd
