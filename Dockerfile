@@ -12,9 +12,9 @@ RUN yum -y install which
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 RUN curl -L get.rvm.io | bash -s stable
 RUN source /etc/profile.d/rvm.sh
-RUN rvm reload
-RUN rvm install 2.0.0
-RUN rvm use 2.0.0 --default
+RUN /usr/local/rvm/bin/rvm reload
+RUN /usr/local/rvm/bin/rvm install 2.0.0
+RUN /usr/local/rvm/bin/rvm use 2.0.0 --default
 RUN yum -y install python-devel
 RUN pip install ansible-lint
 RUN yum -y install rubygems-devel
