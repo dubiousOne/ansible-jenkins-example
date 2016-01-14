@@ -10,9 +10,12 @@ RUN yum -y install gcc
 RUN yum -y install tar
 RUN yum -y install python-devel
 
-#install rspec/serverspec 
+#install rspec 
 RUN yum -y install rubygems-devel
 RUN gem install rspec
+
+#install serverspec
+RUN gem install net-ssh -v 2.9.2
 RUN gem install serverspec
 RUN gem install rake
 
